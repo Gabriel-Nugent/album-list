@@ -89,6 +89,11 @@ header {
 	border: 0px;
 }
 
+.nav-link.current-page {
+	color: darkgrey;
+	cursor: default;
+}
+
 .divider {
 	height: 18px;
 	width: 1px;
@@ -128,10 +133,19 @@ header {
 	cursor: pointer;
 }
 
+#help {
+	width: 40px;
+	font-size: 24px;
+	font-weight: 900;
+	margin-left: 0px;
+}
+
 input {
 	height: 40px;
 	width: 300px;
+	padding: 5px;
 	font-size: 15px;
+	font-weight: 700;
 	border: 2px solid black;
 	border-radius: 4px;
 }
