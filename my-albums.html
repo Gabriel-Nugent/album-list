@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script async src="scripts.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -21,15 +22,18 @@
         </nav>
     </header>
     <div class="toolbar">
-        <button>Add Album +</button>
-        <form action="">
-            <input type="search" id="album-search" name="search">
-        </form>
+        <button class="add-album">Add Album +</button>
         <button>Save Layout</button>
         <button id="help">?</button>
     </div>
-    <div class="album-space">
+    <div class="album-space"></div>
+    <div class="left-modal">
+        <div class="left-modal-header">
+            <button class="close-modal">&times;</button>
+        </div>
     </div>
+    <div class="right-modal"></div>
+    <div class="overlay"></div>
     <footer>
         <p class="credits">Designed and developed by Gabriel Nugent <a href="">*insert github image link here*</a></p>
     </footer>

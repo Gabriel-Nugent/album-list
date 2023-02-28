@@ -87,6 +87,7 @@ header {
 	font-size: 18px;
 	font-weight: 600;
 	border: 0px;
+	transition: 200ms;
 }
 
 .nav-link.current-page {
@@ -137,21 +138,51 @@ header {
 	width: 40px;
 	font-size: 24px;
 	font-weight: 900;
-	margin-left: 0px;
-}
-
-input {
-	height: 40px;
-	width: 300px;
-	padding: 5px;
-	font-size: 15px;
-	font-weight: 700;
-	border: 2px solid black;
-	border-radius: 4px;
 }
 
 .album-space {
 	background-color: rgb(46, 46, 48);
+}
+
+.left-modal,.right-modal{
+	background-color: white;
+	z-index: 2;
+	position: fixed;
+	transform: scale(0);
+	transition: 200ms;
+}
+
+.left-modal.active,.right-modal.active {
+	transform: scale(1);
+}
+
+.left-modal {
+	height: 500px;
+	width: 600px;
+	left: 10%;
+	top: 20%;
+}
+
+.right-modal {
+	height: 700px;
+	width: 700px;
+	top: 10%;
+	right: 10%;
+}
+
+.overlay {
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+	background-color: black;
+	position: fixed;
+	opacity: 0%;
+	pointer-events: none;
+}
+
+.overlay.active {
+	pointer-events: all;
+	opacity: 50%;
 }
 
 footer {
