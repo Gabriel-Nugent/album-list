@@ -1,5 +1,5 @@
-const client_id = 'fcacac8f88d04e6eb2fdf01f970bb574';
-const client_secret = 'e4b36b40a04940c79e794bc48db595c7';
+const client_id = id;
+const client_secret = secret;
 
 const add_album = document.querySelector(".add-album");
 const modal = document.querySelector(".modal");
