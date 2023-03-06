@@ -144,7 +144,7 @@ header {
 	background-color: rgb(46, 46, 48);
 }
 
-.left-modal,.right-modal{
+.modal,.album-image {
 	background-color: white;
 	z-index: 2;
 	position: fixed;
@@ -152,18 +152,73 @@ header {
 	transition: 200ms;
 }
 
-.left-modal.active,.right-modal.active {
+.modal.active,.album-image.active {
 	transform: scale(1);
 }
 
-.left-modal {
+.modal {
 	height: 500px;
 	width: 600px;
 	left: 10%;
 	top: 20%;
+	background-color: black;
+	border: 2px solid green;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
 }
 
-.right-modal {
+.modal-header {
+	height: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.close-modal {
+	background-color: transparent;
+	color: white;
+	font-size: 40px;
+	border: 0px;
+	padding: 0px;
+	height: 40px;
+	width: 40px;
+	transition: 200ms;
+
+}
+
+.close-modal:hover {
+	background-color: grey;
+	border-radius: 100%;
+}
+
+.modal-body {
+	height: 420px;
+	width: 100%;
+}
+
+.modal-footer {
+	height: 40px;
+	width: 100%;
+	display: flex;
+}
+
+#album-search {
+	height: 100%;
+	padding: 0px 10px 0px 10px;
+	background-color: rgb(41, 40, 40);
+	border: 0px;
+	border-radius: 0px 0px 8px 8px;
+	font-size: 20px;
+}
+
+.search-button {
+	height: 100%;
+	aspect-ratio: 1 / 1;
+}
+
+.album-image {
 	height: 700px;
 	width: 700px;
 	top: 10%;
