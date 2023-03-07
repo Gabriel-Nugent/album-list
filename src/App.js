@@ -1,6 +1,7 @@
 import AlbumSpace from "./AlbumSpace";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Searchbar from "./Searchbar";
 import Toolbar from "./Toolbar";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <div className="toolside">
             <h1 className="heading">Album List</h1>
             <Toolbar />
+            <Searchbar />
         </div>
     </div>  
     );
