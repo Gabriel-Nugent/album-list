@@ -232,7 +232,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	margin: 0px 10px 0px 10px;
 }
 
-.search-button {
+#search-button{
 	height: 35px;
 	width: 50px;
 	margin: 0px
