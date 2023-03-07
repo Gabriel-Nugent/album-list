@@ -39,7 +39,11 @@ blockquote, q {
 	}
 
 :root {
-	--main-bg-color: rgb(22, 22, 22);
+	--black-color: #000000;
+	--dark-bg-color: #141414;
+	--main-bg-color: #282828;
+	--dark-accent-color: #230046;
+	--light-accent-color: #692aa7;
 }
 
 * {
@@ -67,9 +71,27 @@ body,html{
 	grid-template-rows: 50px auto 50px;
 }
 
-.toolbar {
+.toolside {
+	background-color: var(--dark-bg-color);
 	height: 100%;
-	background-color: var(--main-bg-color);
+	box-shadow: -2px 0px 15px var(--dark-accent-color);
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	text-align: center;
+	color: white;
+	font-size: 60px;
+	width: 100%;
+	height: 200px;
+	padding: 70px 0px 70px 0px;
+}
+
+.toolbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .album-space {
@@ -82,7 +104,7 @@ body,html{
 	align-items: center;
 	height: 100%;
 	width: 100%;
-	background-color: var(--main-bg-color);
+	background-color: var(--dark-bg-color);
 }
 
 .nav-links {
@@ -98,12 +120,12 @@ body,html{
 }
 
 .nav-link:hover {
-	color: darkgrey;
+	color: var(--light-accent-color);
 }
 
 .nav-link, .nav-link:after {
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-size: 18px;
 	font-weight: 600;
 	border: 0px;
@@ -113,19 +135,6 @@ body,html{
 .nav-link.current-page {
 	color: darkgrey;
 	cursor: default;
-}
-
-.divider {
-	height: 18px;
-	width: 1px;
-	border: 1px solid grey;
-
-}
-
-.toolbar {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
 }
 
 .toolbar button {
@@ -143,8 +152,8 @@ body,html{
 
 .toolbar button:hover {
 	border: 2px solid black;
-	background-color: white;
-	color: black;
+	background-color: var(--light-accent-color);
+	color: var(--black-color);
 	cursor: pointer;
 }
 
@@ -155,11 +164,11 @@ body,html{
 }
 
 .album-space {
-	background-color: rgb(46, 46, 48);
+	background-color: var(--main-bg-color);
 }
 
 footer {
-	background-color: rgb(22, 22, 22);
+	background-color: var(--dark-bg-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;

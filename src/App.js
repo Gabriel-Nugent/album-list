@@ -12,6 +12,7 @@ const App = () => {
             <Footer />
         </div>
         <div className="toolside">
+            <h1 className="heading">Album List</h1>
             <Toolbar />
         </div>
     </div>  
