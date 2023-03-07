@@ -1,7 +1,13 @@
 const Searchbar = () => {
     return (  
         <form className ="search-form">
-            <input type="search" name="search" className="search-bar"/>
+            <input 
+            autocomplete="off"
+            placeholder="Electric Wizard"
+            type="search" 
+            name="search" 
+            className="search-bar"
+            />
             <select name="category" id="category">
                 <option value="album">Album</option>
                 <option value="artist">Artist</option>

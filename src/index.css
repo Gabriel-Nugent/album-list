@@ -77,7 +77,7 @@ body,html{
 	align-items: center;
 	height: 100%;
 	width: 100%;
-	background-color: var(--dark-bg-color);
+	background-color: var(--black-color);
 }
 
 .nav-links {
@@ -89,11 +89,7 @@ body,html{
 }
 
 .nav-link {
-	padding: 0px 10px 0px 10px;
-}
-
-.nav-link:hover {
-	color: var(--light-accent-color);
+	padding: 0px 15px 0px 15px;
 }
 
 .nav-link, .nav-link:after {
@@ -105,18 +101,26 @@ body,html{
 	transition: 200ms;
 }
 
+.nav-link:hover {
+	color: var(--light-accent-color);
+	text-shadow: 0px 0px 2px var(--light-accent-color);
+}
+
 .nav-link.current-page {
 	color: var(--main-bg-color);
 	cursor: default;
+	text-shadow: none;
+
 }
 
 .album-space {
 	height: 100%;
 	background-color: var(--main-bg-color);
+	background-image: linear-gradient(var(--main-bg-color), var(--dark-bg-color), var(--black-color))
 }
 
 footer {
-	background-color: var(--dark-bg-color);
+	background-color: var(--black-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -130,9 +134,15 @@ footer {
 .toolside {
 	background-color: var(--dark-bg-color);
 	height: 100%;
-	box-shadow: -2px 0px 10px var(--dark-accent-color);
+	box-shadow: -2px 0px 5px var(--dark-accent-color);
 	display: flex;
 	flex-direction: column;
+	transition: 200ms;
+	align-items: center;
+}
+
+.toolside:hover {
+	box-shadow: -2px 0px 10px var(--light-accent-color);
 }
 
 .heading {
@@ -150,24 +160,24 @@ footer {
 	align-items: center;
 }
 
-button,.search-form select {
-	margin: 0px 10px 0px 10px;
+.toolbar button, .search-form button,select {
+	margin: 0px 10px 0px 0px;
 	height: 40px;
 	width: 120px;
 	background-color: var(--main-bg-color);
 	border-radius: 6px;
 	border: 2px solid var(--main-bg-color);
-	color: rgb(236, 233, 233);
+	color: white;
 	font-size: 15px;
 	font-weight: 600;
 	transition: all 0.2s;
 }
 
-button:hover,.search-form select:hover {
-	border: 2px solid black;
+.toolbar button:hover, .search-form button:hover,select:hover {
+	border: 2px solid var(--light-accent-color);
 	background-color: var(--light-accent-color);
-	color: var(--black-color);
 	cursor: pointer;
+	box-shadow: 0px 0px 3px var(--light-accent-color);
 }
 
 #help {
@@ -195,18 +205,25 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .search-bar {
 	height: 35px;
 	width: 300px;
+	font-size: 20px;
+	color: white;
+}
+
+.search-bar, .list-albums {
 	background-color: var(--main-bg-color);
 	border: 2px solid var(--dark-accent-color);
 	border-radius: 4px;
 	transition: 200ms;
 	padding: 0px 5px 0px 5px;
-	font-size: 20px;
-	color: white;
 }
 
-.search-bar:focus {
+.search-bar:focus,.list-albums:hover {
 	border: 2px solid var(--light-accent-color);
 	box-shadow: 0 0 10px var(--light-accent-color);
+}
+
+.search-bar:focus::placeholder {
+	color: transparent;
 }
 
 .search-form select {
@@ -221,3 +238,44 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	margin: 0px
 }
 
+.list-albums {
+	height: 300px;
+	width: 500px;
+}
+
+.list-holder {
+	height: 100%;
+	width: 100%;
+	padding: 10px 5px 0px 5px;
+	white-space: nowrap;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+.album-selector {
+	margin: 0px 0px 10px 0px;
+	transition: 500ms;
+	font-size: 24px;
+	color: #605f5f;
+	background: transparent;
+	border: none;
+}
+
+.album-selector:hover {
+	color: white;
+	text-shadow: 0px 0px 1px white;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+.album-preview {
+	height: 300px;
+	width: 300px;
+	margin-top: 20px;
+}
